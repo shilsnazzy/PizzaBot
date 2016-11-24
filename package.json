@@ -1,0 +1,23 @@
+{
+  "name": "pizza-bot",
+  "version": "1.0.0",
+  "description": "Chat bot using MS bot framework to order pizza via SMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purvilpatel/PizzaBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/purvilpatel/PizzaBot/issues"
+  },
+  "homepage": "https://github.com/purvilpatel/PizzaBot#readme",
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "restify": "^4.3.0"
+  }
+}
