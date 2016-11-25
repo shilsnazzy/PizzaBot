@@ -1,6 +1,8 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 var fs = require('fs');
+// Load the http module to create an http server.
+var httpServer = require("./httpServer.js");
 
 //=========================================================
 // Bot Setup
@@ -37,3 +39,5 @@ bot.dialog('/', [
         session.send('Hello %s!', results.response);
     }
 ]);
+
+httpServer.runServer();
