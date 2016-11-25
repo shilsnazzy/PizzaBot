@@ -10,7 +10,6 @@ var fs = require('fs');
         });
         var content = fs.readFileSync("./data/name.json");
         var jsonContent = JSON.parse(content);
-        console.log("User Name:", jsonContent.name);
         response.end("User Name: " + jsonContent.name);
     });
 
