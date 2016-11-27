@@ -1,5 +1,8 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+var fs = require('fs');
+// Load the http module to create an http server.
+var httpServer = require("./httpServer.js");
 
 //=========================================================
 // Bot Setup
@@ -23,6 +26,18 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-bot.dialog('/', function (session) {
-    session.send("Hello World");
-});
+bot.dialog('/', [
+    function (session) {
+        builder.Prompts.text(session, "Hello, What is your name?");
+    },
+    function (session, results) {
+    	var string = "{\"name\":\""+ results.response + "\"}";
+   		fs.writeFile('./data/name.json', string, function (err) {
+   			if (err) return console.log(err);
+   			console.log('Hello World > helloworld.txt');
+		}); 	
+        session.send('Hello %s!', results.response);
+    }
+]);
+
+httpServer.runServer();
