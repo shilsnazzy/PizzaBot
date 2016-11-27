@@ -1,0 +1,26 @@
+/
+/greetings   -> LUIS
+/orderpizza  -> LUIS
+/verifypizza -> LUIS
+/address     -> LUIS
+/profile
+/confirm
+
+
+{
+    "userName": {},
+    "address": {},
+    "orderDate": {
+        "day": {},
+        "month": {},
+        "year": {},
+        "hour": {},
+        "min": {}
+    },
+    "pizza": {
+        "toppings": {},
+        "crust": {},
+        "size": {},
+        "sauce": {}
+    }
+}
