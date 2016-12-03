@@ -62,3 +62,5 @@ bot.dialog('/Welcome', [
 
 // run HTTP server. This server is responsible for website
 httpServer.runServer();
+
+// session.message.user.id
