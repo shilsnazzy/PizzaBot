@@ -34,7 +34,6 @@ bot.dialog('/', [
     	var string = "{\"name\":\""+ results.response + "\"}";
    		fs.writeFile('./data/name.json', string, function (err) {
    			if (err) return console.log(err);
-   			console.log('Hello World > helloworld.txt');
 		}); 	
         session.send('Hello %s!', results.response);
     }
